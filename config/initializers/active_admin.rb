@@ -177,7 +177,7 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
-  config.register_javascript 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'
+  # config.register_javascript 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'
 
   # == CSV options
   #
