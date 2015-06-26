@@ -13,6 +13,8 @@ ActiveAdmin.register Hotel do
   #   permitted
   # end
   #
+  
+  permit_params :booking_date, :name
 
   form do |f|
     inputs 'Details' do
