@@ -17,6 +17,12 @@ ActiveAdmin.register Hotel do
   permit_params :booking_date, :name
 
   controller do
+    def create
+      @hotel = Hotel.new(name: params[:hotel][:name])
+      @hotel.booking_date = params[:hotel][:booking_date].split(',').first.to_date
+      create!
+    end
+
     private
 
     def package_dates pkg_type
@@ -43,6 +49,10 @@ ActiveAdmin.register Hotel do
 
     def collect_dates start_date, end_date, *days
       (start_date..end_date).select { |date| days.include? date.strftime("%^A") }
+    end
+
+    def permitted_params
+      params.permit(:hotel => [:name, :booking_date])
     end
   end
 

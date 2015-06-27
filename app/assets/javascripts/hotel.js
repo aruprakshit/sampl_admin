@@ -25,4 +25,8 @@ $(function() {
     }
     });
   });
+
+$( "#hotel_name" ).autocomplete({
+  source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+});
 });
